@@ -14,7 +14,4 @@
  * limitations under the License.
  */
 
-/**
- * Kotlin DSL related tooling models.
- */
-package org.gradle.tooling.model.kotlin.dsl;
+rootProject.name = "resolution-strategy"

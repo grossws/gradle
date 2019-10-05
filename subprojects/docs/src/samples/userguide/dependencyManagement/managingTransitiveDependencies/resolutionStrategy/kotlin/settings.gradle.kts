@@ -14,18 +14,4 @@
  * limitations under the License.
  */
 
-package org.gradle.tooling.model.kotlin.dsl;
-
-
-import org.gradle.api.Incubating;
-
-/**
- * Severity of an editor report.
- *
- * @since 6.0
- */
-@Incubating
-public enum EditorReportSeverity {
-    WARNING,
-    ERROR
-}
+rootProject.name = "resolution-strategy"

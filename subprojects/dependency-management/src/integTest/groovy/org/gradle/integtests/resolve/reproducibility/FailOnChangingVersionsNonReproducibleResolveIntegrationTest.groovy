@@ -14,25 +14,11 @@
  * limitations under the License.
  */
 
-package org.gradle.tooling.model.kotlin.dsl;
+package org.gradle.integtests.resolve.reproducibility
 
-import org.gradle.api.Incubating;
-
-import javax.annotation.Nullable;
-
-
-/**
- * Report to the editor.
- *
- * @since 6.0
- */
-@Incubating
-public interface EditorReport {
-
-    EditorReportSeverity getSeverity();
-
-    String getMessage();
-
-    @Nullable
-    EditorPosition getPosition();
+class FailOnChangingVersionsNonReproducibleResolveIntegrationTest extends FailOnChangingVersionsResolveIntegrationTest {
+    @Override
+    String getNotation() {
+        "failOnNonReproducibleResolution"
+    }
 }

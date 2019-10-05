@@ -14,29 +14,11 @@
  * limitations under the License.
  */
 
-package org.gradle.tooling.model.kotlin.dsl;
+package org.gradle.integtests.resolve.reproducibility
 
-import org.gradle.api.Incubating;
-
-import java.io.File;
-import java.util.List;
-
-
-/**
- * Model for a Kotlin DSL script.
- *
- * @since 6.0
- */
-@Incubating
-public interface KotlinDslScriptModel {
-
-    List<File> getClassPath();
-
-    List<File> getSourcePath();
-
-    List<String> getImplicitImports();
-
-    List<EditorReport> getEditorReports();
-
-    List<String> getExceptions();
+class FailOnDynamicVersionsNonReproducibleResolveIntegrationTest extends FailOnDynamicVersionsResolveIntegrationTest {
+    @Override
+    String getNotation() {
+        "failOnNonReproducibleResolution"
+    }
 }
